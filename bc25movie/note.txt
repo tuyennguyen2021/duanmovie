@@ -1,0 +1,45 @@
+===== Buổi 10 ======
+* Routing
+    - react-router-dom
+* Fetch Data (Service | Api)
+
+===== Buổi 11 ======
+* Middleware Async Action
+    - redux thunk || redux saga
+* Hooks
+
+===== Buổi 12 ======
+* HOC (Higher order component)
+* Detail Movie
+* Get Params From URL
+
+
+* Auth
+* Guard Routing Admin
+* refactor code api
+
+
+buổi 15
+deploy tay:
+ => mua hosting: 
+ deploy vercel
+
+
+
+
+
+
+
+
+
+
+
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
